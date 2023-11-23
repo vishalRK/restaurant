@@ -5,6 +5,7 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [isToggle, setIsToogle] = useState(false);
   const [isAboutOpen, setAboutOpent] = useState(false);
+  const [isProfileOpen, setProfileOpen] = useState(false);
   return (
     <div className="bg-red-500 h-[50px] w-[100%] flex justify-center">
       <div className="w-[800px]  flex justify-between medium:justify-center lg:relative">
@@ -67,8 +68,14 @@ const Navbar = () => {
             Blogs
           </Link>
         </div>
-        <div className="w-[10%] small:w-[20%]">
+        <div className="w-[10%] small:w-[20%]" onMouseEnter={() => setProfileOpen(true)} onMouseLeave={() => setProfileOpen(false)}>
           <img src="/icons/avtar.svg" alt="" width={50} height={50} />
+          <ol className={`${isProfileOpen?"medium:absolute small:absolute medium:h-[10%] medium:w-[20%] small:w-[30%] small:right-0  medium:left-[75%] large:left-[78%] text-[22px] medium:top-12  small:bg-[#ef4444] transform scale-75 group-hover:scale-100 transition duration-150 ease-in-out origin-top":"hidden"}`}>
+              <li className="text-center  medium:bg-[#ef4444] small:bg-[#ef4444]"><Link href={"/About/Gallery"}>Login</Link></li>
+              <li className="text-center  medium:bg-[#ef4444] small:bg-[#ef4444]"><Link href={"/About/Info"}>Profile</Link></li>
+              <li className="text-center  medium:bg-[#ef4444] small:bg-[#ef4444]"><Link href={"/About/Info"}>Cart</Link></li>
+              <li className="text-center  medium:bg-[#ef4444] small:bg-[#ef4444]"><Link href={"/About/Info"}>Orders</Link></li>
+            </ol>
         </div>
       </div>
     </div>
