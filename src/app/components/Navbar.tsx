@@ -50,7 +50,7 @@ const Navbar = () => {
             </h3>
             <ol className={`${isAboutOpen?"medium:absolute medium:h-[10%] medium:w-[20%]  medium:left-[32%] lg:left-[30%] text-[22px] medium:top-12 small:relative medium:bg-[#ef4444] transform scale-75 group-hover:scale-100 transition duration-150 ease-in-out origin-top":"hidden"}`}>
               <li className="text-center small:text-start medium:bg-[#ef4444]"><Link href={"/About/Gallery"}>Gallery</Link></li>
-              <li className="text-center small:text-start medium:bg-[#ef4444]"><Link href={"/About/Gallery"}>Info</Link></li>
+              <li className="text-center small:text-start medium:bg-[#ef4444]"><Link href={"/About/Info"}>Info</Link></li>
             
             </ol>
           </div>
